@@ -1,0 +1,203 @@
+html, body {
+    position: relative;
+    height: 100%;
+  } 
+body 
+{
+    background: #eee;
+    font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    color:#000;
+    margin: 0;
+    padding: 0;
+    background-image: url('images/sunny-weather-bg-img.png');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat}
+
+main
+{
+    display: flex;
+    flex-direction: column;
+    width: 78%;
+    height: 61%;
+    background-color: rgba(88, 88, 88, 0.28);
+    margin: 40px auto;
+    position: relative;
+    align-items: center;
+    max-width: 600px;
+    -webkit-box-shadow: 0px 0px 12px 0px rgba(0,0,0,1);
+    -moz-box-shadow: 0px 0px 12px 0px rgba(0,0,0,1);
+    box-shadow: 0px 0px 12px 0px rgba(0,0,0,1);
+}    
+
+main .icon
+{
+
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+} 
+
+.icon .wi.wi-cloudy
+{
+    font-size: 100px;
+    position: absolute;
+    top: -40px;
+}
+
+.city-info, .weather-info, .weather-current-details
+{
+    width: 79%;
+    height: 25%;
+    border-bottom: 2px solid white;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    color: white;
+}
+
+.weather-current-details:last-child
+{
+    border: none;
+}
+
+.temp-detail
+{
+    display: flex;
+}
+
+.weather-info .wi.wi-cloudy
+{
+    font-size: 30px;
+}
+
+.weather
+{
+    font-size: 17px;
+}
+
+.Cloud
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+
+.temp-detail .wi.wi-degrees
+{
+    font-size: 46px;
+}
+
+.city, .month-date
+{
+    font-size: 18px;
+    color: white;
+}
+
+.swiper-container 
+{
+    width: 100%;
+    padding-top: 10px;
+    padding-bottom: 30px;
+
+}
+
+.swiper-slide 
+{
+ 
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: space-evenly;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+    background-position: center;
+    background-size: cover;
+    width: 250px;
+    height: 250px;
+    -webkit-box-shadow: -1px 6px 12px 1px rgba(0,0,0,1);
+    -moz-box-shadow: -1px 6px 12px 1px rgba(0,0,0,1);
+    box-shadow: -1px 6px 12px 1px rgba(0,0,0,1);
+    color: white;
+  }  
+
+.card-temp, .card-day
+{
+    font-size: 30px;
+}  
+
+.wi.wi-day-cloudy, .wi.wi-cloud, .wi.wi-rain, .wi.wi-cloudy, .wi.wi-sprinkle, .wi.wi-storm-showers, .wi.wi-day-sunny-overcast
+{
+    font-size: 60px;
+}
+
+.temp.wi.wi-degrees
+{
+    font-size: 40px;
+}
+
+.card-icon
+{
+    display:flex;
+
+}
+
+.card-icon .wi.wi-degrees
+{
+    font-size: 40px;
+}
+
+section
+{
+    width:auto;
+    height: 100vh;
+    background-color: rgba(66, 92, 129, 0);;
+    overflow-y: scroll
+}
+
+nav.navbar
+{
+    background-color: rgba(131, 173, 228);
+    color: #ffffff;
+    top: 0;
+    z-index: 1;
+    width:100%;
+}
+
+#current-date-month
+{
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+
+.current-date
+{
+    margin-bottom: 8px;
+    font-size: 15px;
+    margin-left: 5px;
+}
+
+.current-month
+{
+    font-size: 18px;
+}
+
+.icon
+{
+    background-position: center;
+    background-size: cover;
+    width: 60px;
+    height:60px;
+}
