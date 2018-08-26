@@ -132,7 +132,8 @@ main .icon
     color: white;
   }  
 
-.card-temp, .card-day
+.card-temp1, .card-temp2, .card-temp3, .card-temp4, .card-temp5, .card-temp6, .card-temp7
+ .card-day1, .card-day2, .card-day3, .card-day4, .card-day5, .card-day6, .card-day7
 {
     font-size: 30px;
 }  
@@ -147,7 +148,7 @@ main .icon
     font-size: 40px;
 }
 
-.card-icon
+.temp-div
 {
     display:flex;
 
