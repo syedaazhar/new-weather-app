@@ -1,6 +1,6 @@
 window.onload = function () {
   $.ajax({
-    url:"http://api.openweathermap.org/data/2.5/forecast?q=karachi&appid=3890c8ecf66961bb6012c22cf547b58a&units=metric",
+    url:"https://api.openweathermap.org/data/2.5/forecast?q=karachi&appid=3890c8ecf66961bb6012c22cf547b58a&units=metric",
 
     success : function (data)
       {
@@ -10,8 +10,8 @@ window.onload = function () {
         let forcast3 = new Date(data.list[16].dt * 1000);
         let forcast4 = new Date(data.list[24].dt * 1000);
         let forcast5 = new Date(data.list[32].dt * 1000);
-        let forcast6 = new Date(data.list[0].dt * 1000);
-        let forcast7 = new Date(data.list[0].dt * 1000);
+        // let forcast6 = new Date(data.list[0].dt * 1000);
+        // let forcast7 = new Date(data.list[0].dt * 1000);
 
         let days = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
 
@@ -28,10 +28,67 @@ window.onload = function () {
         document.querySelector(".card-temp3").innerHTML = parseInt(data.list[16].main.temp) + " C°";         
         document.querySelector(".card-temp4").innerHTML = parseInt(data.list[24].main.temp) + " C°";         
         document.querySelector(".card-temp5").innerHTML = parseInt(data.list[32].main.temp) + " C°";  
+
+        let forecasteIcon1 = data.list[0].main;
+      
+        if(forecasteIcon1 == "Clear" )
+        {
+          document.querySelector(".forecast-icon1").innerHTML=`<i class="wi wi-day-sunny"></i>`
+        }
+        else if(forecasteIcon1 == "Clear" )
+        {
+          document.querySelector(".forecast-icon1").innerHTML=`<i class="wi wi-night-clear"></i>`
+        }
+        else if(forecasteIcon1 == "Partly Cloudy" )
+        {
+          document.querySelector(".forecast-icon1").innerHTML=`<i class="wi wi-day-cloudy"></i>`
+        }
+        else if(forecasteIcon1 == "Partly Cloudy" )
+        {
+          document.querySelector(".forecast-icon1").innerHTML=`<i class="wi wi-night-alt-cloudy"></i>`
+        }
+       if(forecasteIcon1 == "Clouds")
+        {
+          document.querySelector(".forecast-icon1").innerHTML=`<i class="wi wi-cloud"></i>`
+        }
+        else if(forecasteIcon1 == "Mostly Cloudy")
+        {
+          document.querySelector(".forecast-icon1").innerHTML=`<i class="wi wi-cloudy"></i>`
+        }
+        else if(forecasteIcon1 == "Scattered Showers")
+        {
+          document.querySelector(".forecast-icon1").innerHTML=`<i class="wi wi-showers"></i>`
+        }
+        else if(forecasteIcon1 == "Rain")
+        {
+          document.querySelector(".forecast-icon1").innerHTML=`<i class="wi wi-rain"></i>`
+        }
+        else if(forecasteIcon1 == "Thunderstorm")
+        {
+          document.querySelector(".forecast-icon1").innerHTML=`<i class="wi wi-thunderstorm"></i>`
+        }
+        else if(forecasteIcon1 == "Snow")
+        {
+          document.querySelector(".forecast-icon1").innerHTML=`<i class="wi wi-snow"></i>`
+        }
+        else if(forecasteIcon1 == "Mist")
+        {
+          document.querySelector(".forecast-icon1").innerHTML=`<i class="wi wi-windy"></i>`
+        }
+        else if(forecasteIcon1 == "Haze")
+        {
+          document.querySelector(".forecast-icon1").innerHTML=`<i class="wi wi-dust"></i>`
+        }
+        else if(forecasteIcon1 == "Storm")
+        {
+          document.querySelector(".forecast-icon1").innerHTML=`<i class="wi wi-sandstorm"></i>`
+        }
+
+
       },
 
       error: function(error){
-        alert(error.responseJSON.message);
+        alert(error);
       }
   });
 
@@ -84,7 +141,7 @@ window.onload = function () {
 
   $.ajax({
 
-    url :"http://api.openweathermap.org/data/2.5/weather?q=karachi&appid=3890c8ecf66961bb6012c22cf547b58a&units=metric",
+    url :"https://api.openweathermap.org/data/2.5/weather?q=karachi&appid=3890c8ecf66961bb6012c22cf547b58a&units=metric",
     success: function(data){
     
       let weatherIcon =document.querySelector(".icon");
