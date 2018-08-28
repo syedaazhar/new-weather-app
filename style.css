@@ -202,3 +202,28 @@ nav.navbar
     width: 60px;
     height:60px;
 }
+
+#search-icon
+{
+    margin: 10px;
+    font-size: 17px;
+    position: absolute;
+    right: 20px;
+}
+
+.form-control
+{
+    background-color: rgba(253, 249, 249, 0);
+    width: 276px;
+}
+
+.form-control::placeholder
+{
+    color: white;
+}
+
+.input-group-append .form-control:focus
+{
+    background-color: rgba(253, 249, 249, 0);
+
+}
