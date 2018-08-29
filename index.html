@@ -1,27 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="icon" href="images/Weather-Partly-Cloudy-Rain-icon.png" type="image">
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.5/css/swiper.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.5/css/swiper.min.css">
     <title>Weather App</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" 
-    integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-    crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" 
-    integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" 
-    crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" 
-    integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" 
-    crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" 
-    integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" 
-    crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+        crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
+        crossorigin="anonymous">
     <link rel="stylesheet" href="css/weather-icons-wind.css">
     <link rel="stylesheet" href="css/weather-icons-wind.min.css">
     <link rel="stylesheet" href="css/weather-icons.css">
@@ -30,31 +27,33 @@
     <script src="script.js"></script>
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
-<!-- 3890c8ecf66961bb6012c22cf547b58a -->
 
-    <section >
-    <!-- As a heading -->
-        <nav class="navbar position-sticky">
+<body>
+    <!-- 3890c8ecf66961bb6012c22cf547b58a -->
+
+    <section>
+        <!-- As a heading -->
+        <nav class="navbar position-sticky shadow p-3 mb-5  rounded">
             <span class="navbar-brand mb-0 h1">Weather Forecast</span>
             <div class="input-group-append" id="search-bar">
-                <input type="text" class="form-control" 
-                placeholder="search weather" 
-                aria-label="Recipient's username" aria-describedby="basic-addon2">
+                <input type="text" class="form-control" placeholder="Search Cities Weather" aria-label="Recipient's username" aria-describedby="basic-addon2">
                 <span class="fas fa-search" id="search-icon" onclick="showCitiesWeather()"></span>
             </div>
 
-            <!-- <div class="input-group-append" id="mobile-search-bar">
-                <input type="text" class="form-control" id="moblie-search-input"
-                placeholder="Recipient's username" 
-                aria-label="Recipient's username" aria-describedby="basic-addon2">
-                <span class="fas fa-search" id="mobile-search-icon"></span>
-            </div> -->
+            <div id="myNav" class="overlay shadow   rounded">
+                <a href="javascript:void(0)" class="closebtn" onclick="closeBar()">&times;</a>
+                <div class="input-group-append" id="mobile-search-bar">
+                    <input type="text" class="form-control" id="moblie-search-input" placeholder="Search Cities Weather" aria-label="Recipient's username"
+                        aria-describedby="basic-addon2">
+                    <span class="fas fa-search" id="mobile-search-icon"></span>
+                </div>
+            </div>
+            <i class="fas fa-search" id="mobile-icon" onclick="openSearchBar()"></i>    
         </nav>
         <!-- weather-details -->
         <main>
             <div class="icon">
-                <i class="wi wi-cloudy"></i>
+                <i class=""></i>
             </div>
 
             <div class="city-info">
@@ -64,7 +63,7 @@
                 <div id="current-date-month">
                     <h5 class="current-month"></h5>
                     <span class="current-date"></span>
-                </div>    
+                </div>
             </div>
 
             <div class="weather-info">
@@ -75,7 +74,6 @@
                     <i class="wi wi-degrees"></i>
                 </div>
                 <div class="Cloud">
-                    <i class="wi wi-cloudy"><img src=""></i>
                     <p class="weather">
                         <!-- Most Cloudy -->
                     </p>
@@ -90,22 +88,22 @@
                     <!-- Humidity 71%  -->
                 </p>
             </div>
-            
-            <div class="weather-current-details">
+
+            <div class="weather-current-details last-box">
                 <p class="wind">
                 </p>
                 <p class="wind-direction">
                 </p>
             </div>
-        </main>    
-              
+        </main>
+
         <!-- Slider main container -->
-        <div class="swiper-container" >
-    <!-- Additional required wrapper -->
+        <div class="swiper-container">
+            <!-- Additional required wrapper -->
             <div class="swiper-wrapper">
                 <!-- Slides -->
-                
-                <div class="swiper-slide"  >
+
+                <div class="swiper-slide">
                     <h4 class="card-day1">
                         <!-- Sunday -->
                     </h4>
@@ -114,56 +112,56 @@
                         <h5 class="card-temp1">
                             <!-- 31  -->
                         </h5>
-                    </diV>    
-                    
+                    </diV>
+
                 </div>
                 <div class="swiper-slide">
                     <h4 class="card-day2">
-                            <!-- Monday -->
-                        </h4>
-                        <h4 class="forecast-icon2"></h4>
-                        <diV class="temp-div">
-                            <h5 class="card-temp2">
-                                <!-- 33  -->
-                            </h5>
-                        </diV>    
-                    
+                        <!-- Monday -->
+                    </h4>
+                    <h4 class="forecast-icon2"></h4>
+                    <diV class="temp-div">
+                        <h5 class="card-temp2">
+                            <!-- 33  -->
+                        </h5>
+                    </diV>
+
                 </div>
                 <div class="swiper-slide">
                     <h4 class="card-day3">
-                            <!-- Tuesday -->
-                        </h4>
-                        <h4 class="forecast-icon3"></h4>
-                        <diV class="card-icon">
-                            <h5 class="card-temp3">
-                                <!-- 26  -->
-                            </h5> 
-                        </diV>    
-                
+                        <!-- Tuesday -->
+                    </h4>
+                    <h4 class="forecast-icon3"></h4>
+                    <diV class="card-icon">
+                        <h5 class="card-temp3">
+                            <!-- 26  -->
+                        </h5>
+                    </diV>
+
                 </div>
                 <div class="swiper-slide">
                     <h4 class="card-day4">
-                            <!-- Wednesday -->
-                        </h4>
-                        <h4 class="forecast-icon4"></h4>
-                            <diV class="card-icon">
-                                <h5 class="card-temp4">
-                                    <!-- 29 -->
-                                </h5> 
-                        </diV>
-                    
+                        <!-- Wednesday -->
+                    </h4>
+                    <h4 class="forecast-icon4"></h4>
+                    <diV class="card-icon">
+                        <h5 class="card-temp4">
+                            <!-- 29 -->
+                        </h5>
+                    </diV>
+
                 </div>
                 <div class="swiper-slide">
                     <h4 class="card-day5">
-                            <!-- Thursday -->
-                        </h4>
-                        <h4 class="forecast-icon5"></h4>
-                        <diV class="card-icon">
-                            <h5 class="card-temp5">
-                                <!-- 30  -->
-                            </h5>    
-                        </diV>
-                    
+                        <!-- Thursday -->
+                    </h4>
+                    <h4 class="forecast-icon5"></h4>
+                    <diV class="card-icon">
+                        <h5 class="card-temp5">
+                            <!-- 30  -->
+                        </h5>
+                    </diV>
+
                 </div>
                 <!-- <div class="swiper-slide">
                     <h4 class="card-day6">
@@ -187,7 +185,7 @@
                             </h5>    
                         </diV>
                 </div> -->
-            
+
             </div>
             <!-- If we need pagination -->
             <!-- <div class="swiper-pagination"></div> -->
@@ -201,12 +199,11 @@
         </div>
     </section>
 
-    
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.5/js/swiper.js"></script>
+
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.5/js/swiper.js"></script> -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.5/js/swiper.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.5/js/swiper.esm.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.5/js/swiper.esm.bundle.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.5/js/swiper.esm.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.5/js/swiper.esm.bundle.js"></script> -->
 </body>
+
 </html>
-
-
