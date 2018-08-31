@@ -29,14 +29,13 @@
 </head>
 
 <body>
-    <!-- 3890c8ecf66961bb6012c22cf547b58a -->
-
     <section>
         <!-- As a heading -->
         <nav class="navbar position-sticky shadow p-3 mb-5  rounded mobil-nav">
             <span class="navbar-brand mb-0 h1">Weather Forecast</span>
             <div class="input-group-append" id="search-bar">
-                <input type="text" class="form-control" placeholder="Search Cities Weather" aria-label="Recipient's username" aria-describedby="basic-addon2">
+                <input type="text" class="form-control" id="search-input-bar" placeholder="Search Cities Weather" aria-label="Recipient's username"
+                    aria-describedby="basic-addon2">
                 <span class="fas fa-search" id="search-icon" onclick="showCitiesWeather()"></span>
             </div>
 
@@ -45,10 +44,10 @@
                 <div class="input-group-append" id="mobile-search-bar">
                     <input type="text" class="form-control" id="moblie-search-input" placeholder="Search Cities Weather" aria-label="Recipient's username"
                         aria-describedby="basic-addon2">
-                    <span class="fas fa-search" id="mobile-search-icon" onclick="showCitiesWeather()" ></span>
+                    <span class="fas fa-search" id="mobile-search-icon" onclick="showMoblieData()"></span>
                 </div>
             </div>
-            <i class="fas fa-search" id="mobile-icon" onclick="openSearchBar()"></i>    
+            <i class="fas fa-search" id="mobile-icon" onclick="openSearchBar()"></i>
         </nav>
         <!-- weather-details -->
         <main>
@@ -58,7 +57,7 @@
 
             <div class="city-info info">
                 <h3 class="city">
-                    <!-- Karachi -->
+                   
                 </h3>
                 <div id="current-date-month">
                     <h5 class="current-month"></h5>
@@ -69,23 +68,23 @@
             <div class="weather-info info">
                 <div class="temp-detail">
                     <h1 class="temp">
-                        <!-- 29 -->
+                       
                     </h1>
                     <i class="wi wi-degrees"></i>
                 </div>
                 <div class="Cloud">
                     <p class="weather">
-                        <!-- Most Cloudy -->
+                       
                     </p>
                 </div>
             </div>
 
             <div class="weather-current-details info">
                 <p class="visibility">
-                    <!-- Visibility 8km -->
+                   
                 </p>
                 <p class="humidity">
-                    <!-- Humidity 71%  -->
+                   
                 </p>
             </div>
 
@@ -105,74 +104,70 @@
 
                 <div class="swiper-slide">
                     <h4 class="card-day1">
-                        <!-- Sunday -->
+                       
                     </h4>
                     <h4 class="forecast-icon1"></h4>
                     <diV class="temp-div">
                         <h5 class="card-temp1">
-                            <!-- 31  -->
+                            
                         </h5>
                     </diV>
 
                 </div>
                 <div class="swiper-slide">
                     <h4 class="card-day2">
-                        <!-- Monday -->
+                       
                     </h4>
                     <h4 class="forecast-icon2"></h4>
                     <diV class="temp-div">
                         <h5 class="card-temp2">
-                            <!-- 33  -->
+                         
                         </h5>
                     </diV>
 
                 </div>
                 <div class="swiper-slide">
                     <h4 class="card-day3">
-                        <!-- Tuesday -->
+                        
                     </h4>
                     <h4 class="forecast-icon3"></h4>
                     <diV class="card-icon">
                         <h5 class="card-temp3">
-                            <!-- 26  -->
+                            
                         </h5>
                     </diV>
 
                 </div>
                 <div class="swiper-slide">
                     <h4 class="card-day4">
-                        <!-- Wednesday -->
+                       
                     </h4>
                     <h4 class="forecast-icon4"></h4>
                     <diV class="card-icon">
                         <h5 class="card-temp4">
-                            <!-- 29 -->
+                           
                         </h5>
                     </diV>
 
                 </div>
                 <div class="swiper-slide">
                     <h4 class="card-day5">
-                        <!-- Thursday -->
+                        
                     </h4>
                     <h4 class="forecast-icon5"></h4>
                     <diV class="card-icon">
                         <h5 class="card-temp5">
-                            <!-- 30  -->
+                            
                         </h5>
                     </diV>
 
                 </div>
             </div>
-            <!-- If we need pagination -->
-            <!-- <div class="swiper-pagination"></div> -->
+            
 
-            <!-- If we need navigation buttons -->
             <div class="swiper-button-prev"></div>
             <div class="swiper-button-next"></div>
 
-            <!-- If we need scrollbar -->
-            <!-- <div class="swiper-scrollbar"></div> -->
         </div>
     </section>
 
@@ -185,12 +180,3 @@
 
 </html>
 
-<!-- nav class="navbar position-sticky shadow p-3 mb-5  rounded mobil-nav">
-            <a href="javascript:void(0)" class="closebtn" onclick="closeBar()">&times;</a>
-            <span class="navbar-brand mb-0 h1">Weather Forecast</span>
-            <div class="input-group-append" id="search-bar">
-                <input type="text" class="form-control" placeholder="Search Cities Weather" aria-label="Recipient's username" aria-describedby="basic-addon2">
-                <span class="fas fa-search" id="search-icon" onclick="showCitiesWeather()"></span>
-                <span class="navbar-brand mb-0 h1" id="nav2">Weather Forecast</span>
-                <i class="fas fa-search" id="mobile-icon" onclick="openSearchBar()"></i>  
-            </div> -->

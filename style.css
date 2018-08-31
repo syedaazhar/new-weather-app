@@ -2,7 +2,7 @@ html, body {
     position: relative;
     height: 100%;
   } 
-body 
+section
 {
     background: #eee;
     font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
@@ -14,9 +14,11 @@ body
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-    /* background-image: linear-gradient(#00b4ff, #FFEB3B ,#cee6e2); */
-
+    overflow-y: scroll;
+    overflow-x: hidden;
+    height: 100vh
 }
+
 main
 {
     display: flex;
@@ -206,7 +208,7 @@ nav.navbar
     height:60px;
 }
 
-.search-icon
+#search-icon
 {
     margin: 10px;
     font-size: 17px;
@@ -229,8 +231,10 @@ nav.navbar
 .input-group-append .form-control:focus
 {
     background-color: rgba(253, 249, 249, 0);
-
+    border: none;
+    color: white;
 }
+
 .last-box
 {
     display: flex;
@@ -302,7 +306,10 @@ nav.navbar
     {
         display: none;
     }
-    
+    #search-icon
+    {
+        display: block !important;
+    }
 
     
 }
@@ -322,49 +329,6 @@ nav.navbar
 }
 
 
-/* @media screen and (max-width: 600px) {
-    .navbar{
-        height: 0%;
-        width: 100%;
-        position: fixed;
-        z-index: 1;
-        top: 0;
-        left: 0;
-        background-color: rgb(128, 95, 203);
-        overflow-y: hidden;
-        transition: 0.5s;
-        display: none;
-    }
-
-    .navbar .closebtn {
-        position: absolute;
-        top: 46px;
-        right: 21px;
-        font-size: 38px;
-        color: white;
-    }
-
-    #search-bar{
-        padding: 50px 20px;
-    }
-
-    .form-control{
-        width:100%;
-        height:45px;
-        border: none;
-        color: #ffffff;
-        padding-left:35px;
-    }
-    
-    #nav2, #mobile-icon{
-        display: block;
-    }
-       
-    
-
-    
-}
- */
 
 
 
