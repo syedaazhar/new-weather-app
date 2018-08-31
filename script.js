@@ -707,12 +707,14 @@ function showMoblieData() {
       if (currentTime > sunrise && currentTime < sunset) {
         document.querySelector('section').style["background-image"] = `url(images/orange-png.png)`;
         document.querySelector('nav.navbar').style['background-color'] = `#fdd274`;
-        document.querySelector("#myNav").style['background-color'] = `#fdd274`
+        document.querySelector("#myNav").style['background-color'] = `#fdd274`;
+        document.querySelector('section').style['background-image']= `linear-gradient(#fdcd76,#fdd375,#fcd579,#fdd77d,#fcd77e,#fcd780)`;
       }
       else {
         document.querySelector('section').style["background-image"] = `url(images/blue-png.png)`;
         document.querySelector('nav.navbar').style['background-color'] = `#805fcb`;
-        document.querySelector("#myNav").style['background-color'] = `#805fcb`
+        document.querySelector("#myNav").style['background-color'] = `#805fcb`;
+        document.querySelector('section').style['background-image']= `linear-gradient(#6a56c1,#8e65d1,#a16eda,#ae74e1,#c27dea)`;
       }
 
     },
