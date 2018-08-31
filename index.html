@@ -33,19 +33,19 @@
 
     <section>
         <!-- As a heading -->
-        <nav class="navbar position-sticky shadow p-3 mb-5  rounded">
+        <nav class="navbar position-sticky shadow p-3 mb-5  rounded mobil-nav">
             <span class="navbar-brand mb-0 h1">Weather Forecast</span>
             <div class="input-group-append" id="search-bar">
                 <input type="text" class="form-control" placeholder="Search Cities Weather" aria-label="Recipient's username" aria-describedby="basic-addon2">
                 <span class="fas fa-search" id="search-icon" onclick="showCitiesWeather()"></span>
             </div>
 
-            <div id="myNav" class="overlay shadow   rounded">
+            <div id="myNav" class="overlay shadow rounded mobil-nav">
                 <a href="javascript:void(0)" class="closebtn" onclick="closeBar()">&times;</a>
                 <div class="input-group-append" id="mobile-search-bar">
                     <input type="text" class="form-control" id="moblie-search-input" placeholder="Search Cities Weather" aria-label="Recipient's username"
                         aria-describedby="basic-addon2">
-                    <span class="fas fa-search" id="mobile-search-icon"></span>
+                    <span class="fas fa-search" id="mobile-search-icon" onclick="showCitiesWeather()" ></span>
                 </div>
             </div>
             <i class="fas fa-search" id="mobile-icon" onclick="openSearchBar()"></i>    
@@ -56,7 +56,7 @@
                 <i class=""></i>
             </div>
 
-            <div class="city-info">
+            <div class="city-info info">
                 <h3 class="city">
                     <!-- Karachi -->
                 </h3>
@@ -66,7 +66,7 @@
                 </div>
             </div>
 
-            <div class="weather-info">
+            <div class="weather-info info">
                 <div class="temp-detail">
                     <h1 class="temp">
                         <!-- 29 -->
@@ -80,7 +80,7 @@
                 </div>
             </div>
 
-            <div class="weather-current-details">
+            <div class="weather-current-details info">
                 <p class="visibility">
                     <!-- Visibility 8km -->
                 </p>
@@ -89,7 +89,7 @@
                 </p>
             </div>
 
-            <div class="weather-current-details last-box">
+            <div class="weather-current-details last-box info">
                 <p class="wind">
                 </p>
                 <p class="wind-direction">
@@ -163,29 +163,6 @@
                     </diV>
 
                 </div>
-                <!-- <div class="swiper-slide">
-                    <h4 class="card-day6">
-                            Friday
-                        </h4>
-                        <i><img class="forecast-icon6" src=""></i>
-                        <diV class="card-icon">
-                            <h5 class="card-temp6">
-                                27 
-                            </h5>    
-                        </diV>
-                </div>
-                <div class="swiper-slide">
-                    <h4 class="card-day7">
-                            Saturday
-                        </h4>
-                        <i><img class="forecast-icon7" src=""></i>
-                        <diV class="card-icon">
-                            <h5 class="card-temp7">
-                                29 
-                            </h5>    
-                        </diV>
-                </div> -->
-
             </div>
             <!-- If we need pagination -->
             <!-- <div class="swiper-pagination"></div> -->
@@ -200,10 +177,20 @@
     </section>
 
 
-    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.5/js/swiper.js"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.5/js/swiper.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.5/js/swiper.min.js"></script>
     <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.5/js/swiper.esm.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.5/js/swiper.esm.bundle.js"></script> -->
 </body>
 
 </html>
+
+<!-- nav class="navbar position-sticky shadow p-3 mb-5  rounded mobil-nav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeBar()">&times;</a>
+            <span class="navbar-brand mb-0 h1">Weather Forecast</span>
+            <div class="input-group-append" id="search-bar">
+                <input type="text" class="form-control" placeholder="Search Cities Weather" aria-label="Recipient's username" aria-describedby="basic-addon2">
+                <span class="fas fa-search" id="search-icon" onclick="showCitiesWeather()"></span>
+                <span class="navbar-brand mb-0 h1" id="nav2">Weather Forecast</span>
+                <i class="fas fa-search" id="mobile-icon" onclick="openSearchBar()"></i>  
+            </div> -->

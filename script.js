@@ -1,7 +1,8 @@
 
 var mySwiper;
 function showCitiesWeather() {
-  let cityName = document.querySelector('.form-control').value;
+  let cityName=document.querySelector('.form-control').value;
+  
 
   $.ajax({
     url: `https://api.openweathermap.org/data/2.5/forecast?q=${cityName ? cityName : "Karachi"}&appid=3890c8ecf66961bb6012c22cf547b58a&units=metric`,
@@ -60,33 +61,33 @@ function showCitiesWeather() {
         document.querySelector(".forecast-icon1").innerHTML = `<i class="wi wi-showers"></i>`
         console.log("6");
       }
-    
-      
+
+
       else if (forecasteIcon1 == 531 || forecasteIcon1 == 522 || forecasteIcon1 == 520) {
         document.querySelector(".forecast-icon1").innerHTML = `<i class="wi wi-hail"></i>`
         console.log("3");
       }
       else if (forecasteIcon1 == 200 || forecasteIcon1 == 201 || forecasteIcon1 == 202
-        || forecasteIcon1 == 210 || forecasteIcon1 == 211|| forecasteIcon1 == 212
-        || forecasteIcon1 == 221 || forecasteIcon1 == 230 || forecasteIcon1 == 231 || forecasteIcon1 == 232 ) {
+        || forecasteIcon1 == 210 || forecasteIcon1 == 211 || forecasteIcon1 == 212
+        || forecasteIcon1 == 221 || forecasteIcon1 == 230 || forecasteIcon1 == 231 || forecasteIcon1 == 232) {
         document.querySelector(".forecast-icon1").innerHTML = `<i class="wi wi-thunderstorm"></i>`
         console.log("8");
       }
       else if (forecasteIcon1 == 500 || forecasteIcon1 == 501 || forecasteIcon1 == 502
-        || forecasteIcon1 == 503 || forecasteIcon1 == 504|| forecasteIcon1 == 511
-        || forecasteIcon1 == 520 || forecasteIcon1 == 521 || forecasteIcon1 == 522 || forecasteIcon1 == 531 ) {
+        || forecasteIcon1 == 503 || forecasteIcon1 == 504 || forecasteIcon1 == 511
+        || forecasteIcon1 == 520 || forecasteIcon1 == 521 || forecasteIcon1 == 522 || forecasteIcon1 == 531) {
         document.querySelector(".forecast-icon1").innerHTML = `<i class="wi wi-rain"></i>`
         console.log("8");
       }
       else if (forecasteIcon1 == 600 || forecasteIcon1 == 601 || forecasteIcon1 == 602
         || forecasteIcon1 == 611 || forecasteIcon1 == 612 || forecasteIcon1 == 615
-        || forecasteIcon1 == 616 || forecasteIcon1 == 620 || forecasteIcon1 == 621 || forecasteIcon1 == 622 ) {
+        || forecasteIcon1 == 616 || forecasteIcon1 == 620 || forecasteIcon1 == 621 || forecasteIcon1 == 622) {
         document.querySelector(".forecast-icon1").innerHTML = `<i class="wi wi-snow"></i>`
         console.log("9");
       }
       else if (forecasteIcon1 == 701 || forecasteIcon1 == 711 || forecasteIcon1 == 721
         || forecasteIcon1 == 731 || forecasteIcon1 == 741 || forecasteIcon1 == 751
-        || forecasteIcon1 == 761 || forecasteIcon1 == 762 || forecasteIcon1 == 771 || forecasteIcon1 == 781 )  {
+        || forecasteIcon1 == 761 || forecasteIcon1 == 762 || forecasteIcon1 == 771 || forecasteIcon1 == 781) {
         document.querySelector(".forecast-icon1").innerHTML = `<i class="wi wi-windy"></i>`
         console.log("10");
       }
@@ -366,6 +367,7 @@ function showCitiesWeather() {
       if (currentTime > sunrise && currentTime < sunset) {
         document.querySelector('body').style["background-image"] = `url(images/orange-png.png)`;
         document.querySelector('nav.navbar').style['background-color'] = `#fdd274`;
+        document.querySelector("#myNav").style['background-color'] = `#fdd274`
       }
       else {
         document.querySelector('body').style["background-image"] = `url(images/blue-png.png)`;
@@ -383,15 +385,20 @@ function showCitiesWeather() {
 
 }
 
+// function showMobileResult(){
+//   showCitiesWeather();
+// }
+
 function openSearchBar() {
   document.getElementById("myNav").style.height = "20%";
+
 }
 
 function closeBar() {
   document.getElementById("myNav").style.height = "0%";
+
 }
 
-// if (navigator.geolocation) {
 
 window.onload = function () {
 
@@ -446,19 +453,6 @@ window.onload = function () {
     }
   });
 
-  // var currentPosition;
-  // function getCurrentLocation (position) {
-  //     currentPosition = position;
-  //     latitude = currentPosition.coords.latitude;
-  //     longitude = currentPosition.coords.longitude;
-  //     //AJAX request"
-  //     $.getJSON("http://api.openweathermap.org/data/2.5/weather?lat=" + latitude + "&lon=" + longitude + "&APPID=3890c8ecf66961bb6012c22cf547b58a&units=metric", function (data) {
-  //         var rawJson = JSON.stringify(data);
-  //         var json = JSON.parse(rawJson);
-  //         updateWeather(json); //Update Weather parameters
-  //     });
-  // }
-  // navigator.geolocation.getCurrentPosition(getCurrentLocation);
+  showCitiesWeather();
 }
 
-// }
