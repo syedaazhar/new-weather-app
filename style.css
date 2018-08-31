@@ -17,7 +17,6 @@ section
     overflow-y: scroll;
     overflow-x: hidden;
     height: 100vh;
-    background-color:linear-gradient(top to orange,white)
 }
 
 main
@@ -26,7 +25,7 @@ main
     flex-direction: column;
     width: 78%;
     height: 61%;
-    background-color: rgba(88, 88, 88, 0.28);
+    background-color: rgba(88, 88, 88, 0);
     margin: 40px auto;
     position: relative;
     align-items: center;
@@ -166,13 +165,13 @@ main .icon
     font-size: 40px;
 }
 
-section
+/* section
 {
     width:auto;
     height: 100vh;
     background-color: rgba(66, 92, 129, 0);;
     overflow-y: scroll
-}
+} */
 
 nav.navbar
 {
