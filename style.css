@@ -282,6 +282,7 @@ nav.navbar
     top: 60px;
     font-size: 18px;
     left:11px;
+    cursor: pointer;
 }
 
 #moblie-search-input::placeholder
@@ -295,6 +296,7 @@ nav.navbar
     font-size: 17px;
     margin: 16px;
     display: none;
+    cursor: pointer;
 
 }
 

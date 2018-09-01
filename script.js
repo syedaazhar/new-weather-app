@@ -32,7 +32,7 @@ function showCitiesWeather() {
 
       // day1
 
-      let forecasteIcon1 = data.list[0].weather[0].id;
+      let forecasteIcon1 = data.list[0].weather[0].main;
 
       if (forecasteIcon1 == "Clear") {
         document.querySelector(".forecast-icon1").innerHTML = `<i class="wi wi-day-sunny"></i>`
@@ -43,7 +43,7 @@ function showCitiesWeather() {
         console.log("2");
       }
 
-      if (forecasteIcon1 == "Clouds") {
+      else if (forecasteIcon1 == "Clouds") {
         document.querySelector(".forecast-icon1").innerHTML = `<i class="wi wi-cloud"></i>`
         console.log("3");
       }
@@ -310,7 +310,7 @@ function showCitiesWeather() {
       document.querySelector(".current-date").innerHTML = date.getDate();
 
       let currentTemp = document.querySelector(".temp");
-      currentTemp.innerHTML = data.main.temp;
+      currentTemp.innerHTML = parseInt(data.main.temp);
 
       let weathercondition = document.querySelector(".weather");
       weathercondition.innerHTML = data.weather[0].main;
@@ -393,7 +393,7 @@ function showMoblieData() {
 
       // day1
 
-      let forecasteIcon1 = data.list[0].weather[0].id;
+      let forecasteIcon1 = data.list[0].weather[0].main;
 
       if (forecasteIcon1 == "Clear") {
         document.querySelector(".forecast-icon1").innerHTML = `<i class="wi wi-day-sunny"></i>`
@@ -404,7 +404,7 @@ function showMoblieData() {
         console.log("2");
       }
 
-      if (forecasteIcon1 == "Clouds") {
+      else if (forecasteIcon1 == "Clouds") {
         document.querySelector(".forecast-icon1").innerHTML = `<i class="wi wi-cloud"></i>`
         console.log("3");
       }
@@ -631,13 +631,12 @@ function showMoblieData() {
         document.querySelector(".icon").innerHTML = `<i class="wi wi-day-sunny"></i>`
       }
 
+
       else if (currentWeatherIcon == "Partly Cloudy") {
         document.querySelector(".icon").innerHTML = `<i class="wi wi-day-cloudy"></i>`
       }
-      else if (currentWeatherIcon == "Partly Cloudy") {
-        document.querySelector(".icon").innerHTML = `<i class="wi wi-night-alt-cloudy"></i>`
-      }
-      if (currentWeatherIcon == "Clouds") {
+
+      else if (currentWeatherIcon == "Clouds") {
         document.querySelector(".icon").innerHTML = `<i class="wi wi-cloud"></i>`
       }
       else if (currentWeatherIcon == "Mostly Cloudy") {
@@ -675,7 +674,7 @@ function showMoblieData() {
       document.querySelector(".current-date").innerHTML = date.getDate();
 
       let currentTemp = document.querySelector(".temp");
-      currentTemp.innerHTML = data.main.temp;
+      currentTemp.innerHTML =parseInt(data.main.temp);
 
       let weathercondition = document.querySelector(".weather");
       weathercondition.innerHTML = data.weather[0].main;
@@ -708,14 +707,16 @@ function showMoblieData() {
         document.querySelector('section').style["background-image"] = `url(images/orange-png.png)`;
         document.querySelector('nav.navbar').style['background-color'] = `#fdd274`;
         document.querySelector("#myNav").style['background-color'] = `#fdd274`;
-        document.querySelector('section').style['background-image']= `linear-gradient(#fdcd76,#fdd375,#fcd579,#fdd77d,#fcd77e,#fcd780)`;
+        // document.querySelector('section').style['background']= `linear-gradient(#fdcd76,#fdd375,#fcd579,#fdd77d,#fcd77e,#fcd780)`;
       }
       else {
         document.querySelector('section').style["background-image"] = `url(images/blue-png.png)`;
         document.querySelector('nav.navbar').style['background-color'] = `#805fcb`;
         document.querySelector("#myNav").style['background-color'] = `#805fcb`;
-        document.querySelector('section').style['background-image']= `linear-gradient(#6a56c1,#8e65d1,#a16eda,#ae74e1,#c27dea)`;
+        // document.querySelector('section').style['background']= `linear-gradient(#6a56c1,#8e65d1,#a16eda,#ae74e1,#c27dea)`;
       }
+
+
 
     },
 
