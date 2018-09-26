@@ -6,7 +6,7 @@ The Weather API is a service, which is able to deliver weather forecast data for
 You can see website here: https://syedaazhar.github.io/new-weather-app/
 
 A basic client-side weather app example.
-Uses the Open Weather Map API to request weather data.
+Uses the Open #Weather Map API# to request weather data.
 
 ## LANGUAGES
 #### HTML
