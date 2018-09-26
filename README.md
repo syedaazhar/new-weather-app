@@ -19,7 +19,7 @@ You can see website here: https://syedaazhar.github.io/new-weather-app/
 
 
 
-##LIBRARIES
+## LIBRARIES
  * **Bootstrap**
  check this simple and amazing library 
  http://getbootstrap.com/
